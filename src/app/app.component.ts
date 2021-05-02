@@ -80,9 +80,11 @@ export class AppComponent implements OnInit {
 
   public viewHistory() {
     this.showHistory = true;
+    document.body.classList.add('no-scroll');
   }
 
   public onCloseModal(event: any) {
     this.showHistory = false;
+    document.body.classList.remove('no-scroll');
   }
 }
