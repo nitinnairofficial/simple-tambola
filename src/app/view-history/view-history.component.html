@@ -1,0 +1,17 @@
+<section class="modal">
+  <div class="modal-header">
+    <p>View history</p>
+
+    <button class="btn-close" (click)="close()">Close</button>
+  </div>
+
+  <div class="modal-body">
+    <ng-container *ngIf="historyList?.length">
+      <p *ngFor="let number of historyList">{{ number }}</p>
+    </ng-container>
+
+    <p *ngIf="historyList?.length < 1">No history found.</p>
+  </div>
+</section>
+
+<div class="backdrop" (click)="close()"></div>

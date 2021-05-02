@@ -1,0 +1,66 @@
+.modal {
+  width: 20rem;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 2000;
+  position: fixed;
+  right: 0;
+  top: 0;
+  animation: slideIn ease-in-out 300ms;
+
+  .modal-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+
+    p,
+    button {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  .modal-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(20rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}

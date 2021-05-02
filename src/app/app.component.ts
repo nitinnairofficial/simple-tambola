@@ -9,6 +9,7 @@ export class AppComponent implements OnInit {
   public numberList = [];
   public generatedNumberList = [];
   public generatedNumber = 0;
+  public showHistory = false;
 
   public ngOnInit() {
     const storedNumberList = JSON.parse(localStorage.getItem('TAMBOLA'));
@@ -75,5 +76,13 @@ export class AppComponent implements OnInit {
       };
     });
     localStorage.setItem('TAMBOLA', JSON.stringify(this.numberList));
+  }
+
+  public viewHistory() {
+    this.showHistory = true;
+  }
+
+  public onCloseModal(event: any) {
+    this.showHistory = false;
   }
 }

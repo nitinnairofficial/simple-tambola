@@ -1,5 +1,7 @@
 <header>
   <p>Simple Tambola</p>
+
+  <button class="btn-history" (click)="viewHistory()">View history</button>
 </header>
 <main class="container">
   <section class="generate-number">
@@ -35,3 +37,9 @@
 </main>
 
 <footer></footer>
+
+<app-view-history
+  *ngIf="showHistory"
+  [showHistory]="showHistory"
+  (closeModal)="onCloseModal($event)"
+></app-view-history>

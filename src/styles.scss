@@ -20,14 +20,27 @@ header {
   top: 0;
   left: 0;
   z-index: 100;
-  width: 100vw;
-  padding: 1rem;
+  width: 100%;
   background-color: #fff;
-  display: block;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
 
-  p {
+  p,
+  button {
     color: #0067ca;
-    margin: 0;
+    margin: 0 1rem;
   }
 }
 
@@ -129,4 +142,20 @@ header {
 .error-message {
   font-size: 1rem;
   margin-bottom: 4rem;
+}
+
+.btn-history,
+.btn-close {
+  border: 2px solid #0067ca;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: #0067ca;
+  font-size: 1rem;
+  &:hover {
+    color: #fff;
+    background-color: #0067ca;
+  }
 }
