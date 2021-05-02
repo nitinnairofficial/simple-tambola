@@ -60,6 +60,7 @@ export class AppComponent implements OnInit {
   public resetBoard() {
     if (window.confirm('Are you sure you want to reset board?')) {
       localStorage.clear();
+      this.generatedNumberList = [];
       this.resetNumberList();
       this.generatedNumber = 0;
     }
