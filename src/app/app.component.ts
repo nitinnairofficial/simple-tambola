@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   public ngOnInit() {
     const storedNumberList = JSON.parse(localStorage.getItem('TAMBOLA'));
-    if (storedNumberList.length) {
+    if (storedNumberList) {
       this.numberList = storedNumberList;
       this.generatedNumber = Number(
         localStorage.getItem('LAST_GENERATED_NUMBER')
