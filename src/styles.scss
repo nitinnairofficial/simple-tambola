@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+@import "normalize";
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: fixed;
+  max-height: 4rem;
+  border-bottom: 1px solid #ccc;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  padding: 1rem;
+  background-color: #fff;
+  display: block;
+
+  p {
+    color: #0067ca;
+    margin: 0;
+  }
+}
+
+.container {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem;
+  margin-top: 4rem;
+
+  .generate-number {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+
+    .btn-generate {
+      margin-bottom: 4rem;
+      border: 2px solid #0067ca;
+      padding: 0.75rem 1.25rem;
+      background-color: #fff;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      color: #0067ca;
+      font-size: 1rem;
+      &:hover {
+        color: #fff;
+        background-color: #0067ca;
+      }
+    }
+
+    .btn-reset {
+      margin-bottom: 4rem;
+      border: 2px solid #ccc;
+      padding: 0.75rem 1.25rem;
+      background-color: #fff;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      color: #000;
+      font-size: 1rem;
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+
+    .generated-text {
+      margin-bottom: 4rem;
+      font-size: 7rem;
+      width: 12rem;
+      height: 12rem;
+      background-color: #f2f4f6;
+      text-align: center;
+      line-height: 1.65;
+      border-radius: 50%;
+    }
+  }
+
+  .number-item {
+    position: relative;
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    border: 0.125rem solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2;
+    font-size: 2rem;
+    margin: 0.5rem;
+  }
+}
+
+.checked-number {
+  background-color: #0067ca;
+  color: #fff;
+  border: 0.125rem solid #0067ca !important;
+}
+
+.error-message {
+  font-size: 1rem;
+  margin-bottom: 4rem;
+}
